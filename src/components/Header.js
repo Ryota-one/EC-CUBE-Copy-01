@@ -8,7 +8,7 @@ const Header = ({ cartCount = 0 }) => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Menu className="h-6 w-6 mr-4 cursor-pointer md:hidden" />
-            <h1 className="text-2xl font-bold text-gray-900">EC-CUBE</h1>
+            <h1 className="text-3xl font-bold text-gray-900">EC-CUBE SHOP</h1>
           </div>
 
           <div className="hidden md:flex flex-1 max-w-lg mx-8">
@@ -40,11 +40,9 @@ const Header = ({ cartCount = 0 }) => {
       <nav className="border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-8 h-12 items-center">
-            <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">新商品</a>
-            <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">特集</a>
-            <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">ケーキ</a>
-            <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">焼き菓子</a>
-            <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">セール</a>
+            <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">新入荷</a>
+            <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">ジェラート</a>
+            <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">アイスサンド</a>
           </div>
         </div>
       </nav>

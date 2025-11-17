@@ -53,12 +53,12 @@ const Hero = () => {
             className="min-w-full px-4 sm:px-6 lg:px-8"
           >
             <div
-              className="relative max-w-7xl mx-auto rounded-lg overflow-hidden "
+              className="relative max-w-5xl mx-auto overflow-hidden "
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                height: '400px'
+                height: '450px'
               }}
             >
               {/* オーバーレイ（テキストを読みやすくするため） */}
@@ -73,15 +73,15 @@ const Hero = () => {
 
 
       {/* インジケーター（ドット） */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+      <div className="flex justify-center pt-6 bg-white space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-3 w-3 rounded-full transition ${
               currentSlide === index 
-                ? 'bg-white' 
-                : 'bg-white/50 hover:bg-white/75'
+               ? 'bg-gray-700' 
+               : 'bg-gray-400 hover:bg-gray-500'
             }`}
             aria-label={`スライド${index + 1}へ`}
           />
