@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
+import AboutSection from '../components/AboutSection';
+import TopicRole from '../components/TopicRole';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
 
@@ -18,6 +20,12 @@ const Home = () => {
       <Header cartCount={cartCount} />
       <Hero />
       
+      {/* お店紹介セクション - 新規追加 */}
+      <AboutSection />
+      
+      <TopicRole />
+      
+      {/* 商品一覧 */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex items-center justify-between mb-8">
           <h3 className="text-2xl font-bold text-gray-900">おすすめ商品</h3>
