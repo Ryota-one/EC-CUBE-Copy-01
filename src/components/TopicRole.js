@@ -35,9 +35,6 @@ const TopicRole = () => {
     </div>
   </div>
 </div>
-    
-
-    <h1>haaaaaai</h1>
 </section>
     );
 };

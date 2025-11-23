@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
 import TopicRole from '../components/TopicRole';
+import NewItemsRole from '../components/NewItemsRole';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
 
@@ -24,6 +25,8 @@ const Home = () => {
       <AboutSection />
       
       <TopicRole />
+
+      <NewItemsRole />
       
       {/* 商品一覧 */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
