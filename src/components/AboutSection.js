@@ -4,7 +4,7 @@ import React from 'react';
 const AboutSection = () => {
   return (
     <section className=" from-blue-50">
-        <div className="flex justify-center items-center gap-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="">
                 <h2 className="mb-3">CUBE GELATO ICE</h2>
                 <p className="text-2xl mb-3 font-medium">秋のジェラート”CUBE”をご堪能下さい。</p>

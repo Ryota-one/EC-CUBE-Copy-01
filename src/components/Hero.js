@@ -53,7 +53,7 @@ const Hero = () => {
             className="min-w-full px-4 sm:px-6 lg:px-8"
           >
             <div
-              className="relative max-w-5xl mx-auto overflow-hidden "
+              className="relative max-w-6xl mx-auto overflow-hidden "
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: 'cover',
@@ -61,11 +61,6 @@ const Hero = () => {
                 height: '450px'
               }}
             >
-              {/* オーバーレイ（テキストを読みやすくするため） */}
-              <div className={`${slide.overlay} w-full h-full flex items-center justify-center`}>
-                <div className="text-center text-white px-4">
-                </div>
-              </div>
             </div>
           </div>
         ))}
