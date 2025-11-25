@@ -1,5 +1,7 @@
 import React from 'react';
 import { ShoppingCart, Search, Menu, User, Heart } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 
 const Header = ({ cartCount = 0 }) => {
   return (
@@ -40,6 +42,12 @@ const Header = ({ cartCount = 0 }) => {
       <nav className="border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-8 h-12 items-center">
+            <li>
+              <Link to="/products/list" className="text-sm font-medium text-gray-700 hover:text-blue-600">
+                商品一覧
+              </Link>
+            </li>
+  
             <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">新入荷</a>
             <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">ジェラート</a>
             <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">アイスサンド</a>
