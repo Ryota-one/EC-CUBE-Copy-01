@@ -40,7 +40,7 @@ const Header = ({ cartCount = 0 }) => {
       <nav className="border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-8 h-12 items-center">
-            <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">新商品</a>
+            <a href="../pages/Contact.js" className="text-sm font-medium text-gray-700 hover:text-gray-900">新商品</a>
             <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">特集</a>
             <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">ケーキ</a>
             <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-900">焼き菓子</a>
