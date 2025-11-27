@@ -7,8 +7,7 @@ import TopicRole from '../components/TopicRole';
 import NewItemsRole from '../components/NewItemsRole';
 import EcCategoryRole from '../components/EcCategoryRole';
 import NewsSection from '../components/NewsSection';
-import ProductCard from '../components/ProductCard';
-import { products } from '../data/products';
+
 
 const Home = () => {
   const [cartCount, setCartCount] = useState(0);
