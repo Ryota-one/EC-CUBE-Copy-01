@@ -1,0 +1,55 @@
+@startuml ec-cube
+
+package "Header" {
+  component Logo
+  component Navigation
+  Navigation --> MenuItem_NewArrivals : "新入荷"
+  Navigation --> MenuItem_Gelato : "ジェラート"
+  Navigation --> MenuItem_IceSand : "アイスサンド"
+}
+
+package "GelatoDropdown" {
+  component SaiNoDessert : "彩のデザート"
+  component Cube : "CUBE"
+}
+
+MenuItem_Gelato --> SaiNoDessert
+SaiNoDessert --> Cube
+
+package "IceSandDropdown" {
+  component Fruits : "フルーツ"
+}
+
+MenuItem_IceSand --> Fruits
+
+package "Main" {
+  component Hero
+  component AboutSection
+  component TopRole
+  component NewItemRole
+  component EcCategoryRole
+  component NewsSection
+}
+
+package "Footer" {
+  component FooterNav
+  FooterNav --> MenuItem_About : "当サイトについて"
+  FooterNav --> MenuItem_Privacy : "プライバシーポリシー"
+  FooterNav --> MenuItem_Legal : "特定商取引法に基づく表記"
+  FooterNav --> MenuItem_Contact : "お問い合わせ"
+}
+
+' ページへのリンクを矢印で表現
+MenuItem_NewArrivals --> NewItemRole
+MenuItem_Gelato --> EcCategoryRole
+MenuItem_IceSand --> EcCategoryRole
+
+MenuItem_About --> AboutSection
+MenuItem_Privacy --> AboutSection
+MenuItem_Legal --> AboutSection
+MenuItem_Contact --> NewsSection
+
+Header --> Main
+Main --> Footer
+
+@enduml
