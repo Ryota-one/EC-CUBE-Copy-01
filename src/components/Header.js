@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Search, Menu, User, Heart, ChevronDown } from 'lucide-react';
+import { ShoppingCart, Search, Menu, User, LogIn, Heart, ChevronDown,  } from 'lucide-react';
 
 const Header = ({ cartCount = 0 }) => {
   const [isGelatoOpen, setIsGelatoOpen] = useState(false);
@@ -13,9 +13,9 @@ const Header = ({ cartCount = 0 }) => {
 
             {/* 検索バー */}
           <div className="hidden md:flex flex-1 max-w-lg mx-8">
-            <div className="flex w-full">
+            <div className="flex w-full ">
               {/* セレクトボックス */}
-              <select className="border border-gray-300 rounded-l-full px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500  cursor-pointer">
+              <select className="border border-gray-300 rounded-l-full px-3 py-2 text-xs bg-black text-white focus:outline-none cursor-pointer">
                 <option>全ての商品</option>
                 <option>新入荷</option>
                 <option>ジェラート</option>
@@ -26,32 +26,41 @@ const Header = ({ cartCount = 0 }) => {
               </select>
               
               {/* 検索入力 */}
-              <div className="relative flex-1">
+              <div className="relative w-1/4 flex-1">
                 <input
                   type="text"
-                  placeholder="商品を検索"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-r-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="キーワードを入力"
+                  className="w-[135px] px-4 py-[9px] border border-gray-300  text-xs bg-gray-100 rounded-r-full focus:outline-none "
                 />
-                <Search className="absolute right-3 top-2.5 h-5 w-5 text-gray-400 pointer-events-none" />
+                <Search className="absolute left-[100px] top-2 h-5 w-5 text-gray-600 pointer-events-none" />
               </div>
             </div>
           </div>
           
           {/* ユーザーメニュー */}
-          <div className="flex items-center space-x-4">
-            <Link to="/mypage" className="hover:text-blue-600 transition">
+          <div className="flex items-center space-x-3">
+            <Link to="/mypage" className="flex items-center space-x-1 transition">
               <User className="h-6 w-6 cursor-pointer text-gray-600 hover:text-gray-900" />
+              <span className="text-gray-600 hover:text-gray-900">新規会員登録</span>
             </Link>
-            <Link to="/favorites" className="hover:text-blue-600 transition">
+            <Link to="/favorites" className="flex items-center space-x-1 transition">
               <Heart className="h-6 w-6 cursor-pointer text-gray-600 hover:text-gray-900" />
+              <span classNAme="text-gray-600 hover:text-gray-900">お気に入り</span>
             </Link>
+            <Link to="/login" className="flex items-center space-x-1 transition">
+              <LogIn className="h-6 w-6 cursor-pointer text-gray-600 hover:text-gray-900" />
+              <span className="text-gray-600 hover:text-gray-900">ログイン</span>
+            </Link>
+
             <Link to="/cart" className="relative hover:text-blue-600 transition">
+            <div className="relative">
               <ShoppingCart className="h-6 w-6 text-gray-600 hover:text-gray-900" />
               {cartCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {cartCount}
                 </span>
               )}
+            </div>
             </Link>
           </div>
         </div>
